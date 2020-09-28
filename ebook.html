@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Notes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+    
+    
+    
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  
+    <link rel="stylesheet" href="css/aos.css">
+
+   
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <style>
+          .grid-container {
+            display: grid;
+            grid-column-gap: 150px;
+            grid-template-columns: auto auto auto;
+          }
+
+          .grid-item {
+            
+            font-size: 15px;
+            text-align: center;
+            opacity:.70;
+          }
+          #stateSel{
+          width:225px;
+          padding:5px;
+          display: block;
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: 700;
+            color: #444;
+            line-height: 1.3;
+            padding: .6em 1.4em .5em .8em;
+            box-sizing: border-box;
+            margin: 0;
+            border: 1px solid #aaa;
+            box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+            border-radius: .5em;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+
+          }
+          #countySel{
+          width:225px;
+          padding:5px;
+          display: block;
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: 700;
+            color: #444;
+            line-height: 1.3;
+            padding: .6em 1.4em .5em .8em;
+            box-sizing: border-box;
+            margin: 0;
+            border: 1px solid #aaa;
+            box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+            border-radius: .5em;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+          }
+          #citySel{
+          width:225px;
+          padding:5px;
+          display: block;
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: 700;
+            color: #444;
+            line-height: 1.3;
+            padding: .6em 1.4em .5em .8em;
+            box-sizing: border-box;
+            margin: 0;
+            border: 1px solid #aaa;
+            box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+            border-radius: .5em;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+          }
+          .bg-img {
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+          .bg-text {
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+              color: white;
+              font-weight: bold;
+              border: 3px solid #f1f1f1;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 2;
+              width: 80%;
+              padding: 20px;
+              text-align: center;
+            }
+
+            .button {
+  display: inline-block;
+  padding: 8px 35px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  /*text-decoration: none;*/
+  outline: none;
+  color: #fff;
+  background-color: #999;
+  border: none;
+  border-radius: 15px;
+}
+
+.button:hover {background-color: #4C576E}
+
+.button:active {
+  background-color: #4C576E;
+  transform: translateY(4px);
+}
+
+    </style>
+    
+  </head>
+  <body>
+  
+      <div class="site-wrap">
+
+        <div class="site-mobile-menu">
+          <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+              <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+          </div>
+          <div class="site-mobile-menu-body"></div>
+        </div> <!-- .site-mobile-menu -->
+        
+        
+        <div class="site-navbar-wrap js-site-navbar bg-white">
+          
+          <div class="container">
+            <div class="site-navbar bg-light">
+              <div class="py-1">
+                <div class="row align-items-center">
+                  <div class="col-2">
+                    <h2 class="mb-0 site-logo"><a href="index.html">U|Hub</a></h2>
+                  </div>
+                  <div class="col-10">
+                    <nav class="site-navigation text-right" role="navigation">
+                      <div class="container">
+                        <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+                        <ul class="site-menu js-clone-nav d-none d-lg-block">
+                          <li>
+                             <a href="index.html">Home</a>
+                          </li>
+                          <li class="has-children">
+                            <a href="download.html">Download</a>
+                            <ul class="dropdown arrow-top">
+                              <li><a href="notes.html">Notes</a></li>
+                              <li><a href="ebook.html">Ebook</a></li>
+                              <li><a href="modelqp.html">Model Question Paper</a></li>
+                              <li class="has-children">
+                                <a href="previousqp.html">Previous Year Question Papers</a>
+                                <ul class="dropdown">
+                                  <li><a href="download.html">2018-19</a></li>
+                                  <li><a href="download.html">2017-18</a></li>
+                                  <li><a href="download.html">2016-17</a></li>
+                                  <li><a href="download.html">2015-16</a></li>
+                                  
+                                </ul>
+                              </li>
+
+                            </ul>
+                          </li>
+                          
+                            <li><a href="index.php">Upload</a></li>
+                          <li><a href="#bottom">About</a></li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div style="height: 113px;"></div>
+        <div>
+          <div class="site-blocks-cover bg-img" style="background-image: url(images/hero_bg_3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5"></div>
+            <div class="container bg-text">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-7 text-center" data-aos="fade">
+                  <h1>Download ebook</h1>
+                </div>
+                  <div class="grid-container">
+                    <div class="grid-item">
+                      <!-- <h3>Select semester</h3> -->
+                        <form name="myform" id="myForm">
+        <select id="stateSel" size="1">
+            <option  value="1" selected="selected">Select semester</option> 
+        </select>
+          </form>
+                    </div>
+                    <div class="grid-item">
+                      <form name="myform" id="myForm">
+        <select  name="opttwo" id="countySel" size="1">
+            <option value="2" selected="selected">Select branch first</option>
+        </select>
+         </form>
+                    </div>
+                    <div class="grid-item">
+                      <form name="myform" id="myForm">
+        <select name="optthree" id="citySel" size="1">
+            <option value="3" selected="selected">Select subject first</option>
+        </select>
+    </form>
+                    </div>  
+                  </div>
+
+              </div>
+<br>
+              <button class="button">Submit</button>
+            </div>
+      </div> 
+
+          <footer id="bottom" class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h1 style="color: white">U|Hub</h1>
+        <h4 style="color: white ">Learn and expolore</h4>
+
+      
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Modinagar</span> Uttar Pradesh , India</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span> Support Us</span>
+        
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+    <script type="text/javascript">
+      var stateObject = {
+        "1": {
+            
+            "Mechanical Engineering":[ "Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Computer Science and Engineering/IT":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Information Technology":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Electronics and Communication Engineering":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Agricultural Engineering":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Textile Chemistry":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Textile Technology":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Electrical Engineering":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Electrical and Electronics Engineering":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Food Technology":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Civil Engineering":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Environmental Engineering":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Carpet & Textile Technology":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Aeronautical Engineering":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Plastics Engineering":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Production Engineering":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Bio Technology":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"],
+            "Chemical Engineering":["Physic" , "Chemistry", "Basic Mathematics-I","Basic Electrical Engineering","Programming for Problem Solving","Engineering Graphics and Design","Workshop ","Mathematics-II"]
+            
+        },
+         "2":{
+            "Mechanical Engineering":[],
+            "Computer Science and Engineering/IT":[],
+            "Information Technology":[],
+            "Electronics and Communication Engineering":[],
+            "Agricultural Engineering":[],
+            "Textile Chemistry":[],
+            "Textile Technology":[],
+            "Electrical Engineering":[],
+            "Electrical and Electronics Engineering":[],
+            "Food Technology":[],
+            "Civil Engineering":[],
+            "Environmental Engineering":[],
+            "Carpet & Textile Technology":[],
+            "Aeronautical Engineering":[],
+            "Plastics Engineering":[],
+            "Production Engineering":[],
+            "Bio Technology":[],
+            "Chemical Engineering":[]
+
+        },
+        "3":{
+            "Mechanical Engineering":[],
+            "Computer Science and Engineering/IT":[],
+            "Information Technology":[],
+            "Electronics and Communication Engineering":[],
+            "Agricultural Engineering":[],
+            "Textile Chemistry":[],
+            "Textile Technology":[],
+            "Electrical Engineering":[],
+            "Electrical and Electronics Engineering":[],
+            "Food Technology":[],
+            "Civil Engineering":[],
+            "Environmental Engineering":[],
+            "Carpet & Textile Technology":[],
+            "Aeronautical Engineering":[],
+            "Plastics Engineering":[],
+            "Production Engineering":[],
+            "Bio Technology":[],
+            "Chemical Engineering":[]
+        },
+        "4":{
+            "Mechanical Engineering":[],
+            "Computer Science and Engineering/IT":[],
+            "Information Technology":[],
+            "Electronics and Communication Engineering":[],
+            "Agricultural Engineering":[],
+            "Textile Chemistry":[],
+            "Textile Technology":[],
+            "Electrical Engineering":[],
+            "Electrical and Electronics Engineering":[],
+            "Food Technology":[],
+            "Civil Engineering":[],
+            "Environmental Engineering":[],
+            "Carpet & Textile Technology":[],
+            "Aeronautical Engineering":[],
+            "Plastics Engineering":[],
+            "Production Engineering":[],
+            "Bio Technology":[],
+            "Chemical Engineering":[]
+        },
+        "5":{
+            "Mechanical Engineering":[],
+            "Computer Science and EngineeringIT":[],
+            "Information Technology":[],
+            "Electronics and Communication Engineering":[],
+            "Agricultural Engineering":[],
+            "Textile Chemistry":[],
+            "Textile Technology":[],
+            "Electrical Engineering":[],
+            "Electrical and Electronics Engineering":[],
+            "Food Technology":[],
+            "Civil Engineering":[],
+            "Environmental Engineering":[],
+            "Carpet & Textile Technology":[],
+            "Aeronautical Engineering":[],
+            "Plastics Engineering":[],
+            "Production Engineering":[],
+            "Bio Technology":[],
+            "Chemical Engineering":[]
+        },
+        "6":{
+            "Mechanical Engineering":[],
+            "Computer Science and Engineering/IT":[],
+            "Information Technology":[],
+            "Electronics and Communication Engineering":[],
+            "Agricultural Engineering":[],
+            "Textile Chemistry":[],
+            "Textile Technology":[],
+            "Electrical Engineering":[],
+            "Electrical and Electronics Engineering":[],
+            "Food Technology":[],
+            "Civil Engineering":[],
+            "Environmental Engineering":[],
+            "Carpet & Textile Technology":[],
+            "Aeronautical Engineering":[],
+            "Plastics Engineering":[],
+            "Production Engineering":[],
+            "Bio Technology":[],
+            "Chemical Engineering":[]
+        },
+        "7":{
+          "Mechanical Engineering":[],
+            "Computer Science and Engineering/IT":[],
+            "Information Technology":[],
+            "Electronics and Communication Engineering":[],
+            "Agricultural Engineering":[],
+            "Textile Chemistry":[],
+            "Textile Technology":[],
+            "Electrical Engineering":[],
+            "Electrical and Electronics Engineering":[],
+            "Food Technology":[],
+            "Civil Engineering":[],
+            "Environmental Engineering":[],
+            "Carpet & Textile Technology":[],
+            "Aeronautical Engineering":[],
+            "Plastics Engineering":[],
+            "Production Engineering":[],
+            "Bio Technology":[],
+            "Chemical Engineering":[]
+        },
+        "8":{
+          "Mechanical Engineering":[],
+            "Computer Science and Engineering/IT":[],
+            "Information Technology":[],
+            "Electronics and Communication Engineering":[],
+            "Agricultural Engineering":[],
+            "Textile Chemistry":[],
+            "Textile Technology":[],
+            "Electrical Engineering":[],
+            "Electrical and Electronics Engineering":[],
+            "Food Technology":[],
+            "Civil Engineering":[],
+            "Environmental Engineering":[],
+            "Carpet & Textile Technology":[],
+            "Aeronautical Engineering":[],
+            "Plastics Engineering":[],
+            "Production Engineering":[],
+            "Bio Technology":[],
+            "Chemical Engineering":[]
+        },
+
+       
+
+
+    }
+    window.onload = function () {
+        var stateSel = document.getElementById("stateSel"),
+            countySel = document.getElementById("countySel"),
+            citySel = document.getElementById("citySel");
+        for (var state in stateObject) {
+            stateSel.options[stateSel.options.length] = new Option(state, state);
+        }
+        stateSel.onchange = function () {
+            countySel.length = 1; // remove all options bar first
+            citySel.length = 1; // remove all options bar first
+            if (this.selectedIndex < 1) return; // done   
+            for (var county in stateObject[this.value]) {
+                countySel.options[countySel.options.length] = new Option(county, county);
+            }
+        }
+        stateSel.onchange(); // reset in case page is reloaded
+        countySel.onchange = function () {
+            citySel.length = 1; // remove all options bar first
+            if (this.selectedIndex < 1) return; // done   
+            var cities = stateObject[stateSel.value][this.value];
+            for (var i = 0; i < cities.length; i++) {
+                citySel.options[citySel.options.length] = new Option(cities[i], cities[i]);
+            }
+        }
+    }
+    </script>
+        
+          
+
+      
+
+
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/jquery-migrate-3.0.1.min.js"></script>
+      <script src="js/jquery-ui.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.stellar.min.js"></script>
+      <script src="js/jquery.countdown.min.js"></script>
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/bootstrap-datepicker.min.js"></script>
+      <script src="js/aos.js"></script>
+
+      
+      <script src="js/mediaelement-and-player.min.js"></script>
+
+      <script src="js/main.js"></script>
+        
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+                    var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+
+                    for (var i = 0; i < total; i++) {
+                        new MediaElementPlayer(mediaElements[i], {
+                            pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+                            shimScriptAccess: 'always',
+                            success: function () {
+                                var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+                                for (var j = 0; j < targetTotal; j++) {
+                                    target[j].style.visibility = 'visible';
+                                }
+                      }
+                    });
+                    }
+                });
+        </script>
+
+  </body>
+</html>
